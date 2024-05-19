@@ -50,7 +50,7 @@ const server = app.listen(PORT, console.log(`Server running on Port: ${PORT}`));
 
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'https://workloop.vercel.app/',
+        origin: 'https://workloop.vercel.app',
         credentials: true
     }
 });
