@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://workloop.vercel.app/'],
     credentials: true
 }))
 
@@ -50,7 +50,7 @@ const server = app.listen(PORT, console.log(`Server running on Port: ${PORT}`));
 
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: ['http://localhost:5173', 'https://workloop.vercel.app/'],
         credentials: true
     }
 });
